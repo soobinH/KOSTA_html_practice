@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="">이름</label></td>
+                <td><input type="text" id="username" name="username"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" id="man" name="gender" value="m">
+                    <label for="man">남자</label>
+                    <input type="radio" id="woman" name="gender" value="w">
+                    <label for="woman">여자</label>
+                </td>
+                
+            </tr>
+            <tr>
+                <td><label for="food">분식</label></td>
+                <td>
+                    <select name="food" id="food">
+                        <option value="김밥">김밥</option>
+                        <option value="떡볶이">떡볶이</option>
+                        <option value="순대">순대</option>
+                        <option value="어묵">어묵</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mfood">분식여러개</label>
+                </td>
+                <td>
+                    <select name="mfood" id="mfood" multiple>
+                        <option value="김밥">김밥</option>
+                        <option value="떡볶이">떡볶이</option>
+                        <option value="순대">순대</option>
+                        <option value="어묵">어묵</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="optgroup" id="optgroup">
+                        <optgroup label="HTML5">
+                            <option value="MultimediaTag">Multimedia Tag</option>
+                            <option value="dviceAccess">Device Access</option>
+                            <option value="Connectivity">Conectivity</option>
+                        </optgroup>
+                        <optgroup label="css3">
+                            <option value="Animation">animation</option>
+                            <option value="3DTransform">3DTransform</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="memo">메모</label></td>
+                <td><textarea name="memo" id="memo" cols="30" rows="15"></textarea></td>
+                <td><button>submit</button></td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>
