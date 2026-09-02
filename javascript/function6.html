@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let sum= (x, y) => x+y; // 블록을 생략할 경우 자동 return 된다.
+        let sum1 = (x,y) => {return x+y}; // 블록(중괄호)를 쓸 경우 return 생략 불가능
+        let res1 = sum(3, 5);
+        console.log(res1);
+
+        let sayHello = () => alert("hello");
+
+        function ask(question, yes, no) {
+            if(confirm(question)) yes();
+            else no();
+        }
+
+        ask("동의하십니까?", function() {alert("동의하셨습니다.")}, function() {alert("취소 버튼을 누르셨습니다.")});
+
+        let ask1 = (question, yes, no) => confirm(question)?yes():no();
+        ask("동의하십니까?", () => alert("동의하셨습니다."),() => alert("취소 버튼을 누르셨습니다."));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

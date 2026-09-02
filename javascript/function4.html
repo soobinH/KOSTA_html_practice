@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bubbleSort(arr, compare) {
+            let len = arr.length;
+            for(var i = 0; i<len-1; i++) {
+                for(var j = 0; j<len-i-1; j++) {
+                    if(compare(arr[j], arr[j+1])>0) {
+                        var t = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = t;
+                    }
+                }
+            }
+        }
+
+        let arr = [4, 5, 2, 1, 7, 6];
+        console.log(arr)
+        // bubbleSort(arr, function(x, y){return x-y});
+        bubbleSort(arr, (x, y)=>x-y);
+        console.log(arr);
+        // bubbleSort(arr, function(x, y){return y-x});
+        bubbleSort(arr, (x, y)=>y-x);
+        console.log(arr);
+
+        let users = [{id: 'hong', age:180}, {id:'song', age:150}, {id:'bong', age:10}];
+        console.log(users);
+        // bubbleSort(users, function(u1, u2){return u1.age-u2.age});
+        bubbleSort(users, (u1, u2) => u1.age>u2.age);
+        // console.log(users);
+        // bubbleSort(users, function(u1, u2){return u1.id<u2.id});
+        bubbleSort(users, (u1, u2)=>u2.id>u1.id);
+        console.log(users);
+
+        // let userNameDesc= function(u1, u2) {
+        //     return u2.id.localeCompare(u1.id);
+        // }
+
+        let userNameDesc = (u1, u2) => u2.id.localeCompare(u1.id)
+
+        bubbleSort(users,userNameDesc);
+        console.log(users);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

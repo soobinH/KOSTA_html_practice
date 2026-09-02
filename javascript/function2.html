@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(x,y) {
+            return x+y;
+        }
+
+        // let res1 = sum(3, 5);
+
+        function checkAge(age) {
+            // if(age>18) return true;
+            // return confirm("보호자의 동의를 받으셨나요?");
+
+            return age>18?true:confirm("보호자의 동의를 받으셨나요?");
+        }
+
+        let age = prompt("나이를 입력하세요", 18);
+        checkAge(age)? alert("접속허용"):alert("접속차단");
+
+        // function func() {
+        //     return;
+        // }
+
+        // let f = func();
+        // alert(f);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

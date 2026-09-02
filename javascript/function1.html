@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let userName = 'hong';
+        function showMessage() {
+            let userName = 'song';
+            let message = `hello, ${userName}`; // 지역 변수
+            alert(message);
+        }
+
+        // showMessage(); // hello, song
+        // alert(userName); // hong
+
+        function showMessage2(from, text = "no text given") {
+            from = '*'+from+'*';
+            alert(from+":"+text);
+        }
+
+        let from = "Ann";
+        showMessage2(from, "hello");
+        showMessage2(from);
+
+        alert(from);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

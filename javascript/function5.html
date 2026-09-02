@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 함수는 선언 전에 사용할 수 있다. 함수는 호출문 밑에 호출해도 사용 가능.
+        func1();
+        function func1() {alert("func")}
+
+        // func2(); // 함수 표현식은 선언 전에 호출할 수 없다. 왜냐하면 변수이기 때문에
+        let func2 = function() {alert("func2")}
+        func2();
+
+        let age = prompt('나이를 입력하세요', 18);
+        let welcome = age>18? function(){alert("안녕하세요?")} : function(){alert("안녕?")}
+
+        welcome();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
