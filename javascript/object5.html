@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let user = { name: 'hong', age: 20 }
+
+        // user 객체를 JSON 형태의 문자열로 변환하여 전송(객체->문자열)
+        let userStr = JSON.stringify(user);
+
+        let recvJson = userStr;
+        
+        // JSON 형태의 전송받은 문자열을 자바스크립트 객체로 변환(문자열->객체)
+        let recvUser = JSON.parse(recvJson);
+        console.log(recvUser.name);
+        console.log(recvUser.age)
+        // console.log(user)
+        // console.log(userStr)
+        // console.log(user.name);
+        // console.log(userStr.name)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

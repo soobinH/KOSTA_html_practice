@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let user = {}
+        
+        console.log(isEmpty(user));
+        user.id = "kosta"
+        console.log(isEmpty(user));
+
+        function isEmpty(obj) {
+            for(let key in obj) return false;
+            return true;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
