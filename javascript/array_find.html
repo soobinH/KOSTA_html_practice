@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let users = [
+            {id: 1, name: 'John', age:18},
+            {id: 2, name: 'Peter', age:20},
+            {id: 3, name: 'Mary', age:25},
+            {id: 4, name: 'Ann', age:30},
+        ]
+
+        let user = users.find(function(item, index, array) {
+            return item.id == 2;
+        })
+
+        console.log(user);
+
+        let user20 = users.filter(function(item) {
+            return item.age>=20 && item.age<30;
+        })
+
+        console.log(user20)
+
+        let usersMap = users.map(function(item) {
+            return item.name;
+        })
+
+        console.log(usersMap)
+    </script>
+<body>
+    
+</body>
+</html>

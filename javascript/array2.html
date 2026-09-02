@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = []
+        arr.push(10); // 배열의 맨 뒤에 삽입
+        arr.push(20);
+        arr.push(30);
+        arr.unshift(40); //배열의 맨 앞에 삽입
+
+        console.log(arr)
+        console.log(arr.pop()) // 배열의 뒤에서 꺼내기
+
+        let val1 = arr.pop()
+        console.log(val1);
+        console.log(arr);
+        let val2 = arr.shift(); // 배열의 맨 앞에서 꺼내기
+        console.log(val2);
+        console.log(arr);
+        console.log(arr.length); // 배열 요소의 개수
+
+        let arr2 = [
+            [1, 2, 3],
+            [4, 5, 6]
+        ]
+
+        alert(arr2[1][1]);
+        for(let i = 0; i<arr.length; i++) {
+            console.log(arr[i])
+        }
+
+        for(let a of arr) {
+            console.log(a);
+        }
+
+        for(let i in arr) {
+            console.log(arr[i]);
+        }
+
+        arr.forEach((data) => console.log(data));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

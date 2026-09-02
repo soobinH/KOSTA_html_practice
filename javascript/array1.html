@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr1 = new Array();
+        let arr2 = [
+            {id: '1001', name:'hong', balance: 100000},
+            {id: '1002', name:'fong', balance: 200000},
+            {id: '1003', name:'dong', balance: 300000},
+        ]
+
+        let jsonArr = JSON.stringify(arr2);
+        console.log(jsonArr);
+
+        let accs = JSON.parse(jsonArr);
+        console.log(accs);
+        accs.forEach(function(acc, index, arr) {
+            // console.log(`계좌번호: ${acc.id}, 이름: ${acc.name}, 잔액: ${acc.balance}`);
+            console.log(`${index+1}. 계좌번호: ${arr[index].id}, 이름: ${arr[index].name}, 잔액: ${arr[index].balance}`);
+
+        });
+
+        for(let acc of accs) {
+            console.log(`계좌번호: ${acc.id}, 이름: ${acc.name}, 잔액: ${acc.balance}`);
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

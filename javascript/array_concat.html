@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [1, 2];
+        arr.concat([3, 4]); // [1, 2, 3, 4]
+        arr.concat(3, 4); // 위와 똑같은 거임
+
+        arr.concat([3, 4], [5, 6]) // [1, 2, 3, 4, 5, 6]
+        arr.concat([3,4], 5, 6); // [1, 2, 3, 4, 5, 6]
+        arr.concat(3, 4, 5, 6) // [1, 2, 3, 4, 5, 6]
+
+        let arr2 = [1, 0, false];
+        arr.indexOf(1); // 0
+        arr.indexOf(false) // 2
+        arr.indexOf(null) // -1
+        arr.includes(0) // true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
