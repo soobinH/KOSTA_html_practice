@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(ucFirst('hong') == 'Hong') // true
+        
+        function ucFirst(str) {
+            let res = str.charAt(0).toUpperCase() + str.substring(1);
+            return res;
+        }
+
+        let str1 = truncate("What I'd like to tell on this topic is:", 20);
+        console.log(str1) // What I'd like to tel...
+        let str2 = truncate("Hi everyone!", 20);
+        console.log(str2);
+
+        function truncate(str, length) {
+            return str.length>length? str.substring(0, length) + "..." : str;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

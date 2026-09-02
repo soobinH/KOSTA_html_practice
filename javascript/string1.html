@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str1 = '문자열';
+        let str2 = "문자열";
+        let str3 = `문자열`;
+
+        let guestList = `손님: 
+            * John
+            * Pete
+            * Mary
+            `;
+
+        console.log(guestList);
+        console.log(str1.length); // 문자열 길이
+        console.log(str1.charAt(0)); // 문
+        console.log(str1[0]); // 문
+
+        for(let ch of str1) {
+            console.log(ch)
+        }
+
+        str1[0] = '몬'; // 문자열의 특정 문자를 변경할 수 없다.
+        console.log(str1);
+
+        console.log("Interface".toLowerCase()); // 전체 소문자로
+        console.log("Interface".toUpperCase()); // 전체 대문자로
+
+        let str = 'Widget with id';
+        console.log(str.indexOf('with'));
+        console.log(str.indexOf('widget'));
+        console.log(str.indexOf('id'));
+        console.log(str.indexOf('id', 2));
+
+        let str4 = 'As sly as a fox, as strong as an ox';
+        let target = 'as'
+        let cnt = counter(str4, target);
+        console.log(cnt);
+
+        function counter(source, target) {
+            let cnt = 0;
+            let pos = -1;
+            while((pos = source.indexOf(target, pos+1)) != -1) {
+                cnt++;
+            }
+
+            return cnt;
+            
+        }
+
+        console.log(str4.includes('fox'))
+        // 부분 문자열
+        //substring, substr, slice
+        let str5 = 'stringify';
+        console.log(str5.slice(0, 5)); //strin
+        console.log(str5.slice(0, 1));//s
+        console.log(str5.slice(6)); //ify
+        console.log(str5.slice(-4, -1)); //gif
+
+        //str.substring(start [, end])
+        console.log(str5.substring(2,6)); //ring
+
+        console.log("a".codePointAt(0)); // a -> 97
+        console.log(String.fromCodePoint(97)) // 97 -> a
+
+        let str6 = 'hong';
+        let str7 = 'hong';
+
+        console.log(str6 == str7);
+        console.log('bng'.localeCompare('ang')) // 앞에 있는 문자열이 뒤에 있는 문자열보다 값이 크면 1, 값이 작으면 -1, 같으면 0
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
