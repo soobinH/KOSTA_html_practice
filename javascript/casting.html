@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let val1 = prompt("숫자를 입력하세요", 0);
+        // let val2 = prompt("숫자를 입력하세요", 0);
+
+        // // 형변환 : 문자열->숫자
+        // // alert(`두 수의 합은 ${Number(val1) + Number(val2)}입니다.`);
+        // alert(`두 수의 합은 ${+val1 + +val2} 입니다.`);
+
+        let str = '123';
+        let n1 = +str;
+        let n2 = Number(str);
+        
+        let nn = Number("12A"); // NaN, 형변환 실패
+
+        // 형변환 : boolean -> number
+        // alert(Number(true));  // true -> 1
+        // alert(Number(false)); // false -> 0
+        // alert(Number(null)); // null -> 0
+        // alert(Number(undefined)); // undefined -> NaN
+
+        // Boolean 형변환
+        // alert(Boolean(1));  // 1 -> true
+        // alert(Boolean(0)); // 0 -> false
+        // alert(Boolean("true")); // "true" -> true
+        // alert(Boolean("false")); // "false" -> true 즉, 빈 문자열이 아니라면 true
+        // alert(Boolean("")) // "" -> false 
+        // alert(Boolean(null)); // null -> false
+        // alert(Boolean(undefined)); // undefined -> false
+
+        // String() 형변환
+        // alert(typeof String(true));
+        // alert(typeof String(false));
+
+        alert("6"/"2");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
