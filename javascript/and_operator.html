@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // alert(true && true); // true
+        // alert(true && false); // false
+        // alert(false && true); // false
+        // alert(false && false); // false
+
+        // 첫 번째 피연산자가 true이면 두 번째 피연산자를 반환한다.
+        // alert(1 && 0); // 0 : 처음으로 false가 나온 값을 출력함
+        // alert(1 && 5); // 5
+
+        // // 첫 번째 피연산자가 false이면 첫 번째 피연산자를 반환한다.
+        // alert(0 && 1); // 0
+        // alert("" && null && "hello"); // ""
+        // alert(null && 5); // null
+        // alert(0 && "아무거나 와도 상관없음"); // 0
+
+        // alert(1 && 2 && null && 3); // null
+        // alert(1 && 2 && 3); // 3 : false값이 하나도 없으면 마지막 값을 반환한다.
+
+        let x = 1;
+        x>0 && alert('0보다 큽니다.');
+
+        alert(null|| 2 && 3 || 4); // 3
+
+        if(-1 || 0) alert('first');
+        if(-1 && 0) alert('second');
+        if(null || -1 && 1) alert('third');
+
+        let res1 = true && false; //false
+        let res2 = 3>2 || 5<3; //true
+        let res3 = 3 || 0; // 3
+        let res4 = null || 'hong';// hong
+        let res5 = 8 && 7; // 7
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

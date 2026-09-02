@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ?? (nullish 연산자)
+        let a, b;
+        let x = a??b; // a가 null도 아니고 undefined도 아니면 a, 그 외에는 b
+        x = (a!==null && a!==undefined) ? a: b;
+        
+        let firstName = null;
+        let lastName = null;
+        let nickName = '바이올렛';
+
+        let res = firstName ?? lastName?? nickName ?? "익명의 사용자"; // 바이올렛
+
+        let height = 0;
+
+        let res2 = height || 100; // 100
+        let res3 = height ?? 100; // 0(무조건 null or undefined만 체크함)
+
+        let height2 = null;
+        let width2 = null;
+
+        let area1 = (height2 ?? 100) * (width2 ?? 50); // 100*50 = 5000
+        let area2 = height ?? 100 * width2 ?? 50; // 0
+        // let x2 = 1 && 2 ?? 3; // 문법 error : ??는 || or &&와 같은 연산자와 함께 사용할 수 없다.
+        let x2 = (1 && 2) ?? 3; // 2
+
+        // 정리
+        // 1. 사용하고 자하는 값이 null이거나 undefined일 경우 다른 값으로 대체할 때 사용
+        // 2. || 나 && 와 함께 사용할 수 없다.
+        // 3. 연산자의 우선순위가 대다수의 연산자보다 낮고 삼항조건연산자(?:)와 대입 연산자(=) 보다 높다.
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

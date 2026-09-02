@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // alert(true||true)
+        // alert(true||false)
+        // alert(false||false)
+        // alert(true||false)
+
+        let hour = 9;
+        let isWeekend = true;
+
+        // if(hour<10 || hour>18 || isWeekend) {
+        //     alert("영업시간이 아닙니다.")
+        // }
+
+        // 첫 번째 truthy를 찾는 연산자로 사용
+        let a = 1, b = 2, c = 3;
+        // alert(a || b|| c);
+
+        let s1 = '', s2 = 'hello', s3 = 'hong'
+        let res = s1||s2||s3; // hello
+ 
+        // alert(1||0); // 1
+        // alert(null || 1); // 1
+        // alert(null || 0 || 1); // 1
+        // alert(undefined || null || 0); // 0 (모두 false이기 때문에 마지막 값인 0이 반환됨)
+
+        let firstName = '';
+        let lastName = '';
+        let nickName= '바이올렛';
+        // alert(firstName||lastName||nickName||"익명");
+
+        let isAdult = false;
+        isAdult || alert("보호자 동반이 가능합니다."); // 성인이 아닐 때만 출력문 실행
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
