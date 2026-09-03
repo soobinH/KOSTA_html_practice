@@ -6,14 +6,37 @@
     <title>Document</title>
     <style>
         .box {
-            width:100px;
-            height:100px;
+            width: 100px;
+            height: 100px;
             background-color: red;
+            padding: 10px;
             margin: 10px;
+        }
+
+        .left {
+            float : left;
+        }
+
+        .exit{
+            clear : both;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 5px black;
+        }
+
+        .text box {
+            border : 3px solid black;
+            box-shadow: 10px 10px 10px black;
         }
     </style>
 </head>
 <body>
-    
+    <div class="box left">1</div>
+    <div class="box left">2</div>
+    <div class="box exit">3 </div>
+    <div class = "text box">
+        <h1>lorem ipsum dolor amet</h1>
+    </div>
 </body>
 </html>
