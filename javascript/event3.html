@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let accs = [
+            {id: '1001', name:'홍길동', balance:100000},
+            {id: '1002', name:'송길동', balance:200000},
+            {id: '1003', name:'고길동', balance:300000},
+            {id: '1004', name:'정길동', balance:400000},
+            {id: '1005', name:'박길동', balance:500000},
+        ]
+
+        window.onload= function() {
+            let accTr = accs.map(acc=>`<tr><td>${acc.id}</td><td>${acc.name}</td><td>${acc.balance}</td><td><button class="delBtn">삭제</button></td></tr>`);
+            table.innerHTML = accTr.join('')
+
+            let delBtnArr = document.querySelectorAll(".delBtn");
+            for(let delBtn of delBtnArr) {
+                // delBtn.onclick = function() {
+                //     this.closest('tr').remove();
+                // }
+                delBtn.addEventListener('click', function(){
+                    this.closest('tr').remove();
+                })
+            }
+
+            let div = document.getElementById("div")
+            div.addEventListener('click', function() {
+                alert('div click');
+            })
+
+            const button = document.querySelector('#btn')
+            function clickFunc1() {
+                alert("click1");
+            }
+
+            function clickFunc2(e) {
+                alert("click2");
+                e.stopPropagation(); // 부모의 클릭 이벤트 발생하지 않게 함.
+            }
+
+            // button.onclick = clickFunc1()
+            // button.onclick = clickFunc2()
+
+            button.addEventListener('click', clickFunc1, {once: true});
+            button.addEventListener('click', clickFunc2);
+            // button.removeEventListener('click', clickFunc2);
+        }
+    </script>
+</head>
+<body>
+    <table border="1" id="table">
+
+    </table>
+    <div id="div">
+        <button id="btn">버튼</button>
+    </div>
+    
+</body>
+</html>

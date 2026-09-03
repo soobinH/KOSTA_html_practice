@@ -1,0 +1,38 @@
+[DOM(문서 객체 모델)]
+DOM은 웹 페이지 내의 모든 콘텐츠를 객체로 나타낸다.
+그리고 document 객체는 페이지의 기본 '진입점'역할을 한다.
+
+[documentElement와 body]
+탐색 프로퍼티는 크게 두 개의 집합으로 나뉜다.
+* 모든 노드에 적용 가능(element 뿐 아니라 텍스트, 스페이스, 엔터 등도 포함) : 
+    parentNode, childNode, firstChild, lastChild, previousSibling, nextSibling
+* 요소 노드(element)에만 적용 가능 : 
+    parentElement, children, firstElementChild, lastElementChild, previousElementSibling, nextElementSibling
+
+[getElement*,querySelector*]
+---------------------------------------------------------------------------------------------------------------------------
+메소드                       검색 기준       검색 결과수       사용 방법
+---------------------------------------------------------------------------------------------------------------------------
+getElementById              id             1               document.getElementById
+getElementsByName           name           n               document.getElementsByName, elem.getElementsByName
+getElementsByClassName      class          n               document.getElementsByClassName, elem.getElementsByClassName
+getElementsByTagName        태그명          n               document.getElementsByTagName, elem.getElementsByTagName
+
+querySelector               css 선택자      1               document.querySelector, elem.querySelector
+querySelectorAll            css 선택자      n               document.querySelectorAll, elem.querySelectorAll
+---------------------------------------------------------------------------------------------------------------------------
+
+[event]
+* 마우스 이벤트:
+- click : 마우스 왼쪽 버튼 눌렀을 때
+- contextMenu : 마우스 오른쪽 버튼 눌렀을 때
+- mouseover/mouseout : 마우스 커서가 엘리먼트 안에 들어왔을 때/마우스 커서가 엘리먼트 안에서 밖으로 나갔을 때
+- mousedown/mouseup : 마우스 왼쪽 버튼을 누르고 있을 때 / 누르고 있다가 뗄 때
+- mousemove : 마우스를 움직일 때
+
+* 폼 이벤트:
+- submit : 사용자가 <form>을 제출할 때
+- focus : 사용자가 <input>과 같은 엘리먼트에 포커싱할 때 발생
+
+* 키보드 이벤트:
+- keydown/keyup : 사용자가 키보드 버튼을 누르거나 뗄 때 발생

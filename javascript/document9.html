@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let users = [
+            {id: 'hong', name: '홍길동', age:20},
+            {id: "song", name: "송길동", age:30},
+            {id: "gong", name: "공길동", age:40},
+            {id: "dong", name: "동길동", age:50},
+            {id: "tong", name: "통길동", age:60}
+        ]
+
+        window.onload = function() {
+            let output = '';
+            for(let user of users) {
+                output += `<tr><td>${user.id}</td><td>${user.name}</td><td>${user.age}</td></tr>`;
+            }
+            table.innerHTML = output;
+
+            let image = document.getElementById("image");
+            image.src = "../html/gom.webp";
+            image.width=300;
+        }
+    </script>
+</head>
+<body>
+    <table id="table" border="1">
+
+    </table>
+
+    <img id="image">
+    
+</body>
+</html>

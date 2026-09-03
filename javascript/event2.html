@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            form.onsubmit = function() {
+                let id = document.getElementById("id");
+                let password= document.getElementById("password");
+                if(id.value.trim() === "" || password.value.trim()==="") {
+                    alert("아이디와 비밀번호를 입력하세요")
+                    return false;
+                }
+                return true;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <form action="event1.html" id="form">
+        <input type="text" name="id" id="id"><br>
+        <input type="password" name="password" id="password"><br>
+        <input type="checkbox" name="hobby" value="movie">영화감상
+        <input type="checkbox" name="hobby" value="book">독서
+        <input type="checkbox" name="hobby" value="swim">수영 <br>
+        <input type="radio" name="gender" value="male" checked> 남
+        <input type="radio" name="gender" value="female"> 여
+        <br>
+        <input type="submit" >
+
+
+    </form>
+    
+</body>
+</html>

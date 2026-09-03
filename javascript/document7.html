@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            // let lis = document.getElementsByClassName("red");
+            let lis =document.querySelectorAll(".red");
+            for(let li of lis) {
+                li.style.color ='red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li class="red">1</li>
+        <li>2</li>
+        <li class="red">3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li class="red">7</li>
+    </ul>
+    <h1 class="red">제목</h1>
+    
+</body>
+</html>

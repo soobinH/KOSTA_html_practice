@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곰순이에 관하여</title>
+    <script>
+        window.onload = function() {
+            for(let node of document.body.childNodes) {
+                console.log(node);
+            }
+
+            let td = table.rows[0].cells[1];
+            td.style.backgroundColor = "red";
+            td.parentNode.style.color = "blue";
+            td.previousSibling.style.backgroundColor="green";
+            td.parentElement.nextElementSibling.style.color="gray";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        시작
+    </div>
+
+    <ul>
+        <li>
+            <b>항목</b>
+        </li>
+    </ul>
+
+    <table id="table">
+        <tr>
+            <td>일</td><td>이</td>
+        </tr>
+        <tr>
+            <td>삼</td><td>사</td>
+        </tr>
+    </table>
+</body>
+</html>

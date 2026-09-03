@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){    
+            // let elem = document.getElementById("elem");
+            let elem = document.querySelector("#elem");
+
+            elem.style.backgroundColor = 'red';
+            
+            // let innerElem = document.getElementById("elem-content");
+            // alert(innerElem.innerText)
+            let innerElem = elem.querySelector("#elem-content");
+            innerElem.innerHTML = `<h1>${innerElem.innerText}</h1>`;
+        }
+    </script>
+</head>
+<body>
+    <div id="elem">
+        <div id="elem-content">Element</div>
+    </div>
+</body>
+</html>

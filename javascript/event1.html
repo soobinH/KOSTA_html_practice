@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function buttonClick() {
+            alert("click");
+        }
+
+            window.onload= function() {
+                let button = document.getElementById("button")
+                button.onclick = function() {
+                    alert("click2")
+                }
+
+                document.getElementById("anchorButton").onclick = function(e) {
+                    alert('click3');
+                    // return false; // href로 가지 않게(기본 클릭 이벤트를 막아 준다.)
+                    e.preventDefault(); // href로 가지 않게(기본 클릭 이벤트를 막아 준다.)
+                
+                
+                let button5 = document.getElementById("button5");
+                button5.addEventListener('click', function() {
+                    alert("click5")
+                
+                })
+            };
+
+
+        }
+    </script>
+
+</head>
+<body>
+    <button onclick="buttonClick()">버튼1</button><br>
+    <button id="button">버튼2</button><br>
+    <button onclick="alert(this.innerHTML)">버튼</button><br>
+    <button id="button5">버튼5</button><br>
+    <a href="http://naver.com" id="anchorButton">버튼3</a>
+    
+</body>
+</html>

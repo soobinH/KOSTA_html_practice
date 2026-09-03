@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let h1s = document.querySelectorAll('h1');
+            for(let h1 of h1s) {
+                h1.style.backgroundColor='red'
+            }
+
+            let select = document.querySelector("#select");
+            select.style.backgroundColor= 'blue';
+            select.style.color = 'orange';
+            select.innerHTML = "good javascript"
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Process - 1</h1>
+    <h2>Process - 2</h2>
+    <h1>Process - 3</h1>
+    <h2 id="select">Process - 4</h2>
+
+
+    
+</body>
+</html>

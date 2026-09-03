@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            // let input = document.getElementsByTagName("input");
+            // let input = document.getElementsByName("age");
+            let input = document.querySelectorAll("input[type='radio']")
+            let value;
+            for(let radio of input) {
+                if(radio.checked) {
+                    value = radio.value;
+                }
+            }
+
+            alert(value);
+
+        }
+    </script>
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <td>나이:</td>
+
+            <td>
+                <label>
+                    <input type="radio" name="age" value="young" checked> 18세 미만
+                </label>
+                <label>
+                    <input type="radio" name="age" value="mature"> 18세 이상, 60세 미만
+                </label>
+                <label>
+                    <input type="radio" name="age" value="senior"> 60세 이상
+                </label>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
