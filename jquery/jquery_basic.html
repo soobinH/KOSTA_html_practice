@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').css('color', 'red');
+            $('h1').css('background', 'black');
+
+            $('#btn').click(function() {
+                $('#box').toggleClass('blue');
+            })
+
+            $('#box').mouseover(function() {
+                $('#box').addClass('blue');
+            }).on('mouseleave', function() {
+                $(this).removeClass('blue');
+            })
+
+        })
+
+        // $('#box').toggleClass('blue');
+        // $('#box').addClass('blue');
+        // $('#box').removeClass('blue');
+
+        // window.onload = function() {
+        //     const btn = document.getElementById("btn");
+        //     const box = document.getElementById("box");
+        //     btn.onclick = function() {
+        //         box.classList.toggle('blue');
+        //     }
+        // }
+
+        // $(function() {
+
+        // })
+
+    </script>
+
+    <style>
+        #box {
+            border: 1px solid black;
+            width: 150px;
+            height: 80px;
+            
+        }
+
+        .blue {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+
+    <button id="btn">색상 변경</button>
+    <div id="box">기본 박스</div>
+</body>
+</html>
