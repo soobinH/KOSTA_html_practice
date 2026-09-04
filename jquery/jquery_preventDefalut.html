@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <title>Document</title>
+
+    <script>
+        $(function(){
+            $('a').click(function(e){
+                alert("Naver click");
+                // return false;
+                e.preventDefault();
+            })
+        })
+    </script>
+</head>
+<body>
+    <a href="http://naver.com">Naver</a>
+    
+</body>
+</html>

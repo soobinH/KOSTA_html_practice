@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function() {
+            $('form').submit(function(e) {
+                let value = $('input[type=text]').val()
+                if(value.length!=0 &&  value.replace(/[ㄱ-힣]/g, '').length ==0 ) { // 한글인것을 모두 빈문자열로 처리했을 때 남은문자가 없을 때 -> 진행
+                    alert("과정을 진행합니다.")
+                }else {
+                    alert("한글 이름을 입력하세요.");
+                    e.preventDefault();
+                }
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <form action="http://naver.com">
+        <label for="">이름</label>
+        <input type="text">
+        <input type="submit">
+    </form>
+    
+</body>
+</html>

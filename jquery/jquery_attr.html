@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+        let file_name = ['gom.webp', 'teddy.avif', 'teddy1.webp']
+        $(function() {
+
+            // $('img').attr('alt', '곰순이');
+            // $('img').attr('src', '../html/gom.webp');
+            // $('img').attr('width', '100');
+
+            // $('img').attr({
+            //     alt:'곰순이',
+            //     src: '../html/gom.webp',
+            //     width: 100
+            // })
+
+            $('img').attr({
+                alt:'곰돌이',
+                width: function(idx) {
+                    return 100*(idx+1);
+                },
+                src:function(idx) {
+                    return file_name[idx];
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+</body>
+</html>

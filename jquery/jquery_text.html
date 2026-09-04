@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(function() {
+            $('div:nth-child(1)').text('<h1>Hello jQuery!</h1>')
+            $('div:nth-child(2)').html('<h1>Hello jQuery!</h1>')
+            let text = $('div:nth-child(3)').text();
+            let html = $('div:nth-child(4)').html();
+            console.log(text)
+            console.log(html)
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div><h2>안녕하세요?</h2></div>
+    <div><h2>금요일입니다.</h2></div>
+</body>
+</html>

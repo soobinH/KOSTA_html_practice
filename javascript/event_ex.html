@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
     <title>Document</title>
      <style>
       td select,
@@ -23,60 +25,103 @@
         // interest : 이자율, 0.05는 연5%의 이자율을 의미한다.
         // years : 예금 유치 기간으로, 연 단위
         // result = Math.round(initial * (1 + interest * years))
+        $(function() {
+          let $money = $("input[name='money']");
+          let $interest = $("input[name='interest']");
+          let $months = $("select[name='months']")
 
-        window.onload = function(){
-          let money = document.querySelector("input[name='money']");
-          let interest = document.querySelector("input[name='interest']");
-          let months = document.querySelector("select[name='months']");
+          let $money_before = $("#money-before");
+          let $money_after = $("#money-after");
 
-          let money_before = document.getElementById("money-before");
-          let money_after = document.getElementById("money-after");
+          let initial = +$money.val();
+          let interest_rate= +$interest.val()/100;
+          let years= $months.val()/12;
 
-          let initial = +money.value;
-          let interest_rate= +interest.value/100;
-          let years= months.value/12;
-          
-          
-          money.oninput = function() {
-            initial = +money.value;
-            money_before.innerHTML = money.value;
-            
+          $money.on('input', function() {
+            initial = +$money.val();
+            $money_before.text($money.val());
             calculate();
-          }
+          })
 
-          interest.oninput = function() {
-            interest_rate = +interest.value/100;
+          $interest.on('input', function() {
+            interest_rate = +$interest.val()/100;
             calculate();
-          }
+          })
 
-          months.onchange = function() {
-            years = months.value/12;
+          $months.change(function() {
+            years = $months.val()/12;
             calculate();
-          }
+          })
 
           function calculate() {
 
-            console.log(initial);
-            
-            console.log(years)
-            
-            
             let result = Math.round(initial * (1 + interest_rate * +years));
-            money_after.innerHTML = result;
+            $money_after.text(result);
 
-            console.log(result)
-            console.log(money_after)
-            
             let height = result/initial*100;
-            document.getElementById("height-after").style.height = height+"px";
-
+            $("#height-after").height(height);
           }
+            
 
           calculate();
 
+        
+
+        })
+
+        // window.onload = function(){
+        //   let money = document.querySelector("input[name='money']");
+        //   let interest = document.querySelector("input[name='interest']");
+        //   let months = document.querySelector("select[name='months']");
+
+        //   let money_before = document.getElementById("money-before");
+        //   let money_after = document.getElementById("money-after");
+
+        //   let initial = +money.value;
+        //   let interest_rate= +interest.value/100;
+        //   let years= months.value/12;
           
           
-        }
+        //   money.oninput = function() {
+        //     initial = +money.value;
+        //     money_before.innerHTML = money.value;
+            
+        //     calculate();
+        //   }
+
+        //   interest.oninput = function() {
+        //     interest_rate = +interest.value/100;
+        //     calculate();
+        //   }
+
+        //   months.onchange = function() {
+        //     years = months.value/12;
+        //     calculate();
+        //   }
+
+        //   function calculate() {
+
+        //     console.log(initial);
+            
+        //     console.log(years)
+            
+            
+        //     let result = Math.round(initial * (1 + interest_rate * +years));
+        //     money_after.innerHTML = result;
+
+        //     console.log(result)
+        //     console.log(money_after)
+            
+        //     let height = result/initial*100;
+        //     document.getElementById("height-after").style.height = height+"px";
+
+        //   }
+
+        //   calculate();
+
+          
+          
+        // }
     </script>
 </head>
 <body>

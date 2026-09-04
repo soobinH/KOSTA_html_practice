@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(function() {
+            
+
+            $('#daum_btn').click(function() {
+                $('form').attr('action', 'http://daum.net')
+               
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="http://naver.com">
+        <input type="submit" value="naver">
+        <input type="submit" value="daum" id="daum_btn">
+    </form>
+    
+</body>
+</html>
